@@ -44,7 +44,7 @@ public class TicTacToe {
             cell[x][y] = 'X';
             change = false;
         } else{
-            System.out.println("the sell is already occupied or the selection is invalid");
+            System.out.println("the cell is already occupied or the selection is invalid");
             xturn();
         }
     }
@@ -57,7 +57,7 @@ public class TicTacToe {
             cell[x][y] = 'O';
             change = true;
         } else{
-            System.out.println("the sell is already occupied or the selection is invalid");
+            System.out.println("the cell is already occupied or the selection is invalid");
             oturn();
         }
     }
