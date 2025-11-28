@@ -44,7 +44,7 @@ public class TicTacToe {
             cell[x][y] = 'X';
             change = false;
         } else{
-            System.out.println("the sell is already occupied or the selection is invalid");
+            System.out.println("the cell is already occupied or the selection is invalid");
             xturn();
         }
     }
@@ -57,7 +57,7 @@ public class TicTacToe {
             cell[x][y] = 'O';
             change = true;
         } else{
-            System.out.println("the sell is already occupied or the selection is invalid");
+            System.out.println("the cell is already occupied or the selection is invalid");
             oturn();
         }
     }
@@ -72,7 +72,7 @@ public class TicTacToe {
     // cek siapa yang menang atau seri
     static void checkBoard(){
         for(int i = 0;i<3;i++){
-            // cek diagonal
+            // cek horizontal
             if(cell[i][0] == cell[i][1] && cell[i][1] == cell[i][2] && cell[i][2] != ' '){
                 result(cell[i][0]);
                 return;
