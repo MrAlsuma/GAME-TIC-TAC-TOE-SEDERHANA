@@ -9,8 +9,7 @@ public class MersennePrime_v2 {
             System.out.print("Masukan nilai pangkat (2-62): ");
             n = sc.nextInt();
             if(n <= 1 || n >= 62){
-                System.out.println("Nilai pangkat berada pada luar batas, hanya 2 hingga 62 yang diizinkan");
-                continue;
+                System.out.println("Nilai pangkat berada pada luar batas, hanya 2 hingga 61 yang diizinkan");
             }else{
                 break;
             }
@@ -34,14 +33,11 @@ public class MersennePrime_v2 {
     }
     // method boolean untuk mengecek bilangan prima
     static boolean isPrime(long bilangan){
-        if(bilangan <=1){
+        if(bilangan <=1 || bilangan % 2 == 0){
             return false;
         }
         if(bilangan == 2){
             return true;
-        }
-        if(bilangan % 2 == 0){
-            return false;
         }
 
         for(long i = 3; i*i <= bilangan;i+=2){
@@ -52,4 +48,3 @@ public class MersennePrime_v2 {
         return true;
     }
 }
-
